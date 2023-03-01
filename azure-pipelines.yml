@@ -5,12 +5,16 @@
 
 trigger:
 - main
-variables:
-  solution: '**/*.sln'
-  buildPlatform: 'Any CPU'
-  buildConfiguration: 'Release'
 
 steps:
-- task: NuGetCommand@2
+- task: JFrogNuGet@1
   inputs:
-    restoreSolution: '$(solution)'
+    command: 'restore'
+    artifactoryConnection: 'hts2v2artifactory'
+    targetResolveRepo: 'nuget-virtual'
+    solutionPath: '**/*.sln'
+    collectBuildInfo: true
+    buildName: '$(Build.DefinitionName)'
+    buildNumber: '$(Build.BuildNumber)'
+    includeEnvVars: true
+    packagesDirectory: 'E:\Cache\NugetPackages'
