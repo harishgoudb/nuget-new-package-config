@@ -7,14 +7,9 @@ trigger:
 - main
 
 steps:
-- task: JFrogNuGet@1
+- task: NuGetCommand@2
   inputs:
     command: 'restore'
-    artifactoryConnection: 'hts2v2artifactory'
-    targetResolveRepo: 'nuget-virtual'
-    solutionPath: '**/*.sln'
-    collectBuildInfo: true
-    buildName: '$(Build.DefinitionName)'
-    buildNumber: '$(Build.BuildNumber)'
-    includeEnvVars: true
-    packagesDirectory: 'E:\Cache\NugetPackages'
+    restoreSolution: '**/*.sln'
+    feedsToUse: 'select'
+    restoreDirectory: 'E:\Cache\NuGetPackages'
