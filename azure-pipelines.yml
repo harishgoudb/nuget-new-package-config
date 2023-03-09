@@ -12,7 +12,7 @@ steps:
     targetResolveRepo: 'nuget-virtual'
     solutionPath: '**/*.sln'
     collectBuildInfo: true
-    buildName: '$(Build.DefinitionName)''
+    buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
     includeEnvVars: true
     packagesDirectory: 'E:\Cache\NugetPackages'
