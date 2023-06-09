@@ -15,7 +15,7 @@ steps:
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
     projectKey: nuget
-    packagesDirectory: 'packages'
+    packagesDirectory: 'E:\Cache\NuGetPackages'
 - task: JFrogPublishBuildInfo@1
   inputs:
     artifactoryConnection: 'hts2v2artifactory'
