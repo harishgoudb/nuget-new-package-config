@@ -16,9 +16,6 @@ steps:
     buildNumber: '$(Build.BuildNumber)'
     projectKey: nuget
     packagesDirectory: 'E:\Cache\NuGetPackages'
-- task: MSBuild@1
-  inputs:
-    solution: '**/*.sln'
 - task: JFrogPublishBuildInfo@1
   inputs:
     artifactoryConnection: 'hts2v2artifactory'
