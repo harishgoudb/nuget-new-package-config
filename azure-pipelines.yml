@@ -19,6 +19,7 @@ steps:
 - task: MSBuild@1
   inputs:
     solution: '**/*.sln'
+    restoreNugetPackages: true
 - task: JFrogPublishBuildInfo@1
   inputs:
     artifactoryConnection: 'hts2v2artifactory'
