@@ -11,8 +11,9 @@ steps:
     artifactoryConnection: 'hts2v2artifactory'
     targetResolveRepo: 'nuget-virtual'
     solutionPath: '**/*.sln'
+    packagesDirectory: 'E:\Cache\NuGetPackages'
+    verbosityRestore: 'Normal'
     collectBuildInfo: true
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
-    projectKey: nuget
-    packagesDirectory: 'E:\Cache\NuGetPackages'
+    includeEnvVars: true
