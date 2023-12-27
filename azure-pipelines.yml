@@ -13,7 +13,6 @@ steps:
     artifactoryConnection: 'testingggg'
     targetResolveRepo: 'ado-nuget'
     solutionPath: '**/*.sln'
-    verbosityRestore: 'Normal'
     collectBuildInfo: true
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
