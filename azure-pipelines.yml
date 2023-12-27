@@ -11,7 +11,7 @@ steps:
   inputs:
     command: 'restore'
     artifactoryConnection: 'testingggg'
-    targetResolveRepo: 'nuget-virtual'
+    targetResolveRepo: 'ado-nuget'
     solutionPath: '**/*.sln'
     verbosityRestore: 'Normal'
     collectBuildInfo: true
