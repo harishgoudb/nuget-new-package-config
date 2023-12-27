@@ -10,7 +10,7 @@ steps:
 - task: JFrogNuGet@1
   inputs:
     command: 'restore'
-    artifactoryConnection: 'hts2v2artifactory'
+    artifactoryConnection: 'testingggg'
     targetResolveRepo: 'nuget-virtual'
     solutionPath: '**/*.sln'
     verbosityRestore: 'Normal'
